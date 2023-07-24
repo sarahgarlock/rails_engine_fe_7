@@ -89,7 +89,12 @@ GEM
       irb (>= 1.5.0)
       reline (>= 0.3.1)
     diff-lcs (1.5.0)
+    docile (1.4.0)
     erubi (1.12.0)
+    faraday (2.7.10)
+      faraday-net_http (>= 2.0, < 3.1)
+      ruby2_keywords (>= 0.0.4)
+    faraday-net_http (3.0.2)
     globalid (1.1.0)
       activesupport (>= 5.0)
     i18n (1.12.0)
@@ -103,6 +108,8 @@ GEM
     jbuilder (2.11.5)
       actionview (>= 5.0.0)
       activesupport (>= 5.0.0)
+    launchy (2.5.2)
+      addressable (~> 2.8)
     loofah (2.20.0)
       crass (~> 1.0.2)
       nokogiri (>= 1.5.9)
@@ -187,6 +194,13 @@ GEM
       rspec-mocks (~> 3.11)
       rspec-support (~> 3.11)
     rspec-support (3.12.0)
+    ruby2_keywords (0.0.5)
+    simplecov (0.22.0)
+      docile (~> 1.1)
+      simplecov-html (~> 0.11)
+      simplecov_json_formatter (~> 0.1)
+    simplecov-html (0.12.3)
+    simplecov_json_formatter (0.1.4)
     sprockets (4.2.0)
       concurrent-ruby (~> 1.0)
       rack (>= 2.2.4, < 4)
@@ -218,18 +232,22 @@ GEM
 
 PLATFORMS
   x86_64-darwin-21
+  x86_64-darwin-22
 
 DEPENDENCIES
   bootsnap
   capybara
   debug
+  faraday
   importmap-rails
   jbuilder
+  launchy
   pg (~> 1.1)
   pry
   puma (~> 5.0)
   rails (~> 7.0.4, >= 7.0.4.3)
   rspec-rails
+  simplecov
   sprockets-rails
   stimulus-rails
   turbo-rails
@@ -237,7 +255,7 @@ DEPENDENCIES
   web-console
 
 RUBY VERSION
-   ruby 3.1.1p18
+   ruby 3.2.2p53
 
 BUNDLED WITH
    2.4.9
